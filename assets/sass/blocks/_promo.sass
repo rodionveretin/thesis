@@ -1,0 +1,48 @@
+.promo
+   padding: 15px
+   z-index: 1
+   position: relative
+
+.swiper
+   width: 970px
+   height: 485px
+   z-index: 0
+   &-slide
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 90px 100px
+      position: relative
+      border-radius: 8px
+      background-color: #000000
+      &::after
+         position: absolute
+         content: url(../img/slider.svg)
+         bottom: 0
+         left: 0
+         z-index: -1
+
+.slide
+   &__wrapper
+      align-self: start
+   &__title
+      color: #FFFFFF
+      font-weight: 700
+      font-size: 48px
+      line-height: 130%
+      max-width: 300px
+      margin-bottom: 10px
+      transition: color .2s
+      &:hover
+         color: #243C53
+         transition: color .2s
+   &__subtitle
+      color: #FFFFFF
+      font-weight: 500
+      font-size: 32px
+      line-height: 130%
+   &__img
+      width: 320px
+      object-fit: contain
+   &__link
+      text-decoration: none

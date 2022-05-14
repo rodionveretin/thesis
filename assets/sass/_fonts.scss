@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Exo';
+    src: local('Exo2.0 Regular'), local('Exo20-Regular'),
+        url('../fonts/Exo20-Regular.ttf') format('truetype'),
+        url('../fonts/Exo20-Regular.woff') format('woff'),
+        url('../fonts/Exo20-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display:swap;
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: local('Exo20 Medium'), local('Exo20-Medium'),
+    url('../fonts/Exo20-Medium.ttf') format('truetype'),
+    url('../fonts/Exo20-Medium.woff') format('woff'),
+    url('../fonts/Exo20-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display:swap;
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: local('Exo2.0 SemiBold'), local('Exo20-SemiBold'),
+    url('../fonts/Exo20-SemiBold.ttf') format('truetype'),
+        url('../fonts/Exo20-SemiBold.woff') format('woff'),
+        url('../fonts/Exo20-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display:swap;
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: local('Exo20 Bold'), local('Exo20-Bold'),
+        url('../fonts/Exo20-Bold.ttf') format('truetype'),
+        url('../fonts/Exo20-Bold.woff') format('woff'),
+        url('../fonts/Exo20-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display:swap;
+}

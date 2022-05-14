@@ -1,0 +1,128 @@
+.product-block
+    padding: 40px 0px
+    &__header
+        display: flex
+        margin-bottom: 40px
+    &__title
+        font-weight: 700
+        font-size: 36px
+        color: #070C11
+        margin-right: 30px
+    &__link
+        align-self: end
+        a
+            font-weight: 500
+            font-size: 16px
+            color: #2A5275
+            text-decoration: none
+            line-height: 27px
+            &::after
+                content: url(../img/icons/arrow.svg)
+                margin-left: 5px
+    &__wrapper
+        display: flex
+        flex-wrap: wrap
+
+.product-card
+    padding: 20px
+    position: relative
+    width: 25%
+    border: 1px solid #EAEAF0
+    height: 600px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    transition: box-shadow .3s
+    &:hover
+        box-shadow: 0px 15px 20px rgba(42, 82, 117, 0.1)
+        transition: box-shadow .3s
+    &__mark
+        position: absolute
+        padding: 5px 16px
+        right: 10px
+        background: #48A69B
+        border-radius: 4px
+        font-weight: 500
+        font-size: 16px
+        color: #EDF2F6
+    &__img
+        margin-bottom: 10px
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+    &__category
+        margin-bottom: 10px
+        a
+            font-weight: 500
+            font-size: 16px
+            color: #838688
+            text-decoration: none
+    &__title
+        a
+            font-weight: 400
+            font-size: 20px
+            line-height: 130%
+            color: #070C11
+            text-decoration: none
+            margin: 0
+            -webkit-line-clamp: 3
+            display: -webkit-box
+            -webkit-box-orient: vertical
+            overflow: hidden
+            &:hover
+                color: #2A5275
+                transition: color 0.3s
+    &__rating
+        margin-bottom: 20px
+
+.rating
+    display: flex
+    &__stars
+        margin-right: 10px
+    &__reviews
+        a
+            display: flex
+            text-decoration: none
+            font-size: 16px
+            line-height: 130%
+            color: #070C11
+            svg
+                margin-right: 5px
+.stars
+    &__icon
+        &--active
+            path
+                fill: #FBB13C
+
+.interactions
+    display: flex
+    align-items: center
+    &__prices
+        flex-grow: 1
+    &__favourites
+        margin-right: 10px
+        a
+            border: 1px solid #C8CACB
+            border-radius: 4px
+            padding: 14px
+            padding-top: 16px
+    &__cart
+        a
+            background: #2A5275
+            border: 1px solid #C8CACB
+            border-radius: 4px
+            padding: 14px
+            padding-top: 16px
+.prices
+    display: flex
+    flex-direction: column
+    &__old
+        font-size: 16px
+        line-height: 130%
+        color: #838688
+    &__new
+        font-weight: 700
+        font-size: 24px
+        line-height: 130%
+        color: #070C11

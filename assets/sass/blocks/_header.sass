@@ -1,0 +1,295 @@
+.header
+   position: relative
+.header-top
+   &__wrapper
+      padding: 16px 0px
+      position: relative
+      display: flex
+      align-items: center
+   &__logo
+      width: 184px
+      height: 65px
+      img
+         max-width: 100%
+         height: 100%
+         object-fit: contain
+   &__search-form
+      flex-grow: 1
+      display: flex
+      justify-content: flex-end
+   &__cart
+      position: relative
+      width: 20px
+      height: 20px
+      margin-right: 20px
+      img
+         width: 100%
+         height: 100%
+   &__counter
+      position: absolute
+      right: -9px
+      top: -10px
+      font-size: 10px
+      background: red
+      padding: 2px 5px
+      border-radius: 10px
+      color: #FFFFFF
+   &__login
+      display: none
+      &--active
+         display: block
+   &__img
+      width: 48px
+      height: 48px
+      &--active
+         display: block
+      img
+         width: 100%
+         height: 100%
+   &__profile-menu
+      //display: none
+      position: absolute
+      top: 100%
+      right: 0
+
+.profile-menu
+   display: none
+   z-index: 100
+   width: 280px
+   background: #FFFFFF
+   border: 1px solid #EAEAF0
+   border-radius: 0px 0px 8px 8px
+   border-top: 0px
+   &__item
+      list-style: none
+      padding: 15px 20px
+      transition: all 0.3s
+      a
+         text-decoration: none
+         font-weight: 500
+         font-size: 16px
+         line-height: 19px
+         color: #070C11
+      &:last-child
+         border-top: 1px solid #EAEAF0
+         a
+            color: #F15152
+      &:not(:last-child)
+         &:hover
+            background: #9ea9b1
+            transition: all 0.3s
+            padding-left: 40px
+
+.search
+   &__form
+      width: 80%
+      transition: width 0.3s
+      margin-right: 20px
+   &__input
+      width: 100%
+      border: none
+      border-bottom: 1px solid #C8CACB
+      padding: 15px 20px 15px 48px
+      font-weight: 500
+      font-size: 16px
+      color: #838688
+      &:focus
+         box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07)
+
+.header-bottom
+   background: #0E1821
+   z-index: 100
+   &__wrapper
+      display: flex
+      position: relative
+
+.mobile-menu
+   display: none
+   &__button
+      width: 64px
+   &__link
+      color: #FFFFFF
+      text-decoration: none
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+
+.categories
+   display: none
+   position: absolute
+   top: 100%
+   width: 310px
+   background: #EDF2F6
+   border-radius: 0px 0px 8px 8px
+   z-index: 50
+   &__list
+      padding: 8px 0px
+   &__item
+      list-style: none
+      padding: 10px 18px
+      transition: all 0.3s 
+      a
+         display: flex
+         align-items: center
+         text-decoration: none
+         font-weight: 500
+         font-size: 16px
+         line-height: 130%
+         color: #070C11
+      &:hover
+         background: #9ea9b1
+         transition: all 0.3s
+         padding-left: 40px
+
+.navbar-mobile
+   display: none
+   padding: 50px
+   &__wrapper
+      display: flex
+      flex-direction: column
+   li
+      padding: 15px 0px
+      list-style: none
+      border-bottom: 1px solid #C8CACB
+      a
+         font-weight: 500
+         font-size: 16px
+         line-height: 100%
+         color: #070C11
+         text-decoration: none
+
+.catalog-button
+   padding: 14px 20px
+   display: flex
+   align-items: center
+   width: 310px
+   background: #243C53
+   cursor: pointer
+
+   &__icon
+      margin-right: 10px
+      width: 32px
+      height: 32px
+   &__caption
+      font-weight: 500
+      font-size: 16px
+      line-height: 19px
+      color: #FFFFFF
+
+.navbar
+   padding: 22px
+   &__wrapper
+      display: flex
+      align-items: center
+      gap: 40px
+      list-style: none
+   a
+      color: #FFFFFF
+      text-decoration: none
+      font-weight: 500
+      font-size: 16px
+      line-height: 100%
+      &:after
+         content: ''
+         width: 0px
+         height: 1px
+         display: block
+         background: #fff
+         transition: 0.3s
+      &:hover
+         &:after
+            width: 100%
+
+
+.popup
+   position: absolute
+   top: 50%
+   left: 50%
+   transform: translate(-50%, -50%)
+   z-index: 1000
+   width: 370px
+   background-color: #FFFFFF
+   border-radius: 8px
+   border: 1px solid #EDF2F6
+   &--hidden
+      display: none
+   &__header
+      display: flex
+      justify-content: space-between
+      align-items: center
+      background: #EDF2F6
+      padding: 20px 30px
+      border-radius: 8px 8px 0px 0px
+   &__content
+      padding: 20px 30px
+   &__title
+      font-weight: 600
+      font-size: 24px
+      color: #070C11
+   &__button-close
+      a
+         text-decoration: none
+         color: #FF0000
+         font-size: 20px
+   &__form
+      width: 100%
+      margin-bottom: 20px
+   &__subtitle
+      font-size: 16px
+      color: #070C11
+      margin-bottom: 8px
+
+   &__input
+      width: 100%
+      padding: 16px 20px
+      border: 1px solid #EAEAF0
+      border-radius: 5px
+      margin-bottom: 20px
+   &__password
+      position: relative
+      .popup__input
+         padding-right: 40px
+   &__control
+      position: absolute
+      top: 13px
+      right: 11px
+      display: inline-block
+      width: 24px
+      height: 24px
+      background: url(../img/icons/view.svg) 0 0 no-repeat
+      &--disabled
+         background: url(../img/icons/no-view.svg) 0 0 no-repeat
+   &__restore-link
+      display: block
+      color: #4878A6
+      text-decoration: none
+      margin-bottom: 20px
+   &__checkbox
+      display: flex
+      align-items: center
+      margin-bottom: 22px
+   &__checkbox-input
+      width: 20px
+      height: 20px
+      margin-right: 7px
+   &__rules
+      font-size: 14px
+      line-height: 130%
+      color: #070C11
+      margin-bottom: 10px
+      a
+         text-decoration: none
+         color: #2A5275
+
+   &__button
+      background: #2A5275
+      border-radius: 4px
+      width: 100%
+      padding: 16px 0px
+      color: #FFFFFF
+   &__link
+      text-align: center
+      a
+         color: #4878A6
+         text-decoration: none

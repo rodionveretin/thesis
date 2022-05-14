@@ -1,0 +1,45 @@
+.news
+   padding: 40px 0px
+   &__wrapper
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: 20px
+   &__item
+      padding: 30px 50px
+      width: 49%
+      background: #EDF2F6
+      border-radius: 8px
+   &__header
+      display: flex
+      align-items: center
+      margin-bottom: 40px
+   &__title
+      font-weight: 700
+      font-size: 36px
+      color: #070C11
+      margin-right: 30px
+   &__link
+      align-self: end
+      a
+         font-weight: 500
+         font-size: 16px
+         color: #2A5275
+         text-decoration: none
+         line-height: 27px
+         &::after
+            content: url(../img/icons/arrow.svg)
+            margin-left: 5px
+   &__text
+      font-size: 16px
+      line-height: 120%
+      color: #070C11
+      margin-bottom: 20px
+   &__bottom
+      display: flex
+      align-items: center
+      justify-content: space-between
+   &__date
+      font-size: 16px
+      line-height: 120%
+      color: #838688
