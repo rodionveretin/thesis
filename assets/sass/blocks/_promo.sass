@@ -3,26 +3,25 @@
    z-index: 1
    position: relative
 
-.swiper
+.slider
    width: 970px
    height: 485px
    z-index: 0
-   &-slide
-      display: flex
-      align-items: center
-      justify-content: space-between
-      padding: 90px 100px
-      position: relative
-      border-radius: 8px
-      background-color: #000000
-      &::after
-         position: absolute
-         content: url(../img/slider.svg)
-         bottom: 0
-         left: 0
-         z-index: -1
 
 .slide
+   display: flex
+   align-items: center
+   justify-content: space-between
+   padding: 90px 100px
+   position: relative
+   border-radius: 8px
+   background-color: #000000
+   &::after
+      position: absolute
+      content: url(../img/slider.svg)
+      bottom: 0
+      left: 0
+      z-index: -1
    &__wrapper
       align-self: start
    &__title

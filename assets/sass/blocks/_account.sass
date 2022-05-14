@@ -70,14 +70,24 @@
    &__content
       display: flex
       flex-direction: column
-      border-radius: 8px
-      border: 1px solid #EAEAF0
 
    &__item
       padding: 15px
       display: flex
       align-items: center
       width: 100%
+      border: 1px solid #EAEAF0
+      transition: 0.3s
+      &:not(:last-child)
+         border-bottom: 1px solid #EAEAF0
+      &:first-child
+         border-radius: 8px 8px 0px 0px
+      &:last-child
+         border-radius: 0px 0px 8px 8px
+      &:hover
+         border: 1px solid #243C53
+         background: #EDF2F6
+         transition: 0.3s
 
    &__img
       width: 100px
@@ -89,6 +99,10 @@
 
    &__title
       flex-grow: 1
+   a
+      color: #243C53
+      font-weight: 700
+      text-decoration: none
 
 .woocommerce-Address
    address

@@ -7,10 +7,10 @@
 ?>
 
 <?php if (have_rows('slider')) : ?>
-   <div class="swiper">
+   <div class="swiper slider">
       <div class="swiper-wrapper">
          <?php while (have_rows('slider')) : the_row(); ?>
-            <div class="swiper-slide">
+            <div class="swiper-slide slide">
                <div class="slide__wrapper">
                   <a href="<?php echo the_sub_field('slide_link'); ?>" class="slide__link">
                      <h2 class="slide__title"><?php echo the_sub_field('slide_title'); ?></h2>

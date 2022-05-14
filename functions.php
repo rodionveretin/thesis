@@ -522,3 +522,5 @@ function add_to_cart(WP_REST_Request $request)
 	$product_id = trim($request->get_param('productId'));
 	return WC()->cart->add_to_cart($product_id);
 }
+
+add_action('woocommerce_after_single_product_custom', 'woocommerce_output_product_data_tabs', 10);

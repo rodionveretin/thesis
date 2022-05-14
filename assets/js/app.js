@@ -1,12 +1,26 @@
 $(document).ready(function () {
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.slider', {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
     spaceBetween: 25,
     autoplay: {
         delay: 5000,
+    },
+});
+
+const gallery = new Swiper('.product-gallery', {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 25,
+    autoplay: {
+        delay: 5000,
+    },
+    navigation: {
+        nextEl: '.product-gallery__next',
+        prevEl: '.product-gallery__prev',
     },
 });
 

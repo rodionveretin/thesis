@@ -1,24 +1,20 @@
 <?php
 
 /**
- * The Template for displaying all single products
+ * Шаблон отображения товаров
  */
 
 if (!defined('ABSPATH')) {
-	exit; // Exit if accessed directly
+	exit;
 }
 
 get_header('shop'); ?>
 
-
-<div class="container">
-	<div class="product-item">
+<div class="product-item">
+	<div class="container">
 		<?php woocommerce_breadcrumb(); ?>
-		<?php while (have_posts()) : ?>
-			<?php the_post(); ?>
-			<?php wc_get_template_part('content', 'single-product'); ?>
-		<?php endwhile; // end of the loop. 
-		?>
+		<?php the_post(); ?>
+		<?php wc_get_template_part('content', 'single-product'); ?>
 	</div>
 </div>
 
