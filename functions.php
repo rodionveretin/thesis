@@ -112,7 +112,6 @@ add_action('widgets_init', 'thesis_widgets_init');
 function thesis_scripts()
 {
 	wp_enqueue_style('main', get_stylesheet_uri());
-	wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', array('main'), null, 'all');
 	wp_enqueue_style('thesis', get_template_directory_uri() . '/assets/css/style.css', array('main'), null, 'all');
 
 
@@ -524,3 +523,12 @@ function add_to_cart(WP_REST_Request $request)
 }
 
 add_action('woocommerce_after_single_product_custom', 'woocommerce_output_product_data_tabs', 10);
+
+add_action('woocommerce_product_info_custom', 'woocommerce_template_single_title', 5);
+add_action('woocommerce_product_info_custom', 'woocommerce_template_single_rating', 10);
+add_action('woocommerce_product_info_custom', 'woocommerce_template_single_price', 10);
+add_action('woocommerce_product_info_custom', 'woocommerce_template_single_add_to_cart', 30);
+add_action('woocommerce_product_info_custom', 'woocommerce_template_single_meta', 30);
+add_action('woocommerce_product_info_custom', 'woocommerce_template_single_sharing', 50);
+
+add_action('woocommerce_product_info_price', 'woocommerce_template_single_add_to_cart', 10);

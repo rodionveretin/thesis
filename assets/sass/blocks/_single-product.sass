@@ -4,23 +4,83 @@
       font-size: 24px
       line-height: 130%
       color: #070C11
+      margin-bottom: 20px
    &__wrapper
       display: flex
       margin-bottom: 40px
    &__info
       width: 50%
       padding: 0px 20px
+   &__slider
+      display: flex
+      align-items: center
+      margin: 0 auto
+      margin-top: 10px
+      width: 240px
+   &__block
+      width: 100%
+      padding: 30px
+      border: 1px solid #EAEAF0
+      border-radius: 10px
+   
+   &__favorites
+      display: inline
+      margin-top: 20px
+      margin-bottom: 20px
+      a
+         border: 1px solid #C8CACB
+         border-radius: 4px
+         padding: 14px
+         padding-top: 16px
+
 
 .product-images
    width: 50%
+   &__preview
+      position: relative
+      overflow: hidden
+      img
+         width: 110%
+         height: 110%
+         transition: all 0.1s ease
 
 .product-gallery
+   width: 204px
    &__slide
       img
+         max-width: 56px
          width: 56px
          height: 56px
+         border-radius: 4px
+         border: 2px solid transparent
+      &--active
+         border: 2px solid #243C53 !important
    &__prev
-      position: absolute
+      cursor: pointer
+      color: #243C53
+      position: relative
+      right: 20px
+      user-select: none
    &__next
-      position: absolute
-            
+      cursor: pointer
+      color: #243C53
+      position: relative
+      left: 10px
+      user-select: none
+
+
+.woocommerce-Tabs-panel--description
+   h2
+      margin-bottom: 30px
+   p
+      line-height: 120%
+      &:not(:last-child)
+         margin-bottom: 10px
+
+.woocommerce-variation-price
+   font-weight: 700
+   font-size: 24px
+   line-height: 130%
+   color: #070C11 !important
+.price 
+   color: #070C11 !important

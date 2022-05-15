@@ -14,10 +14,7 @@ const gallery = new Swiper('.product-gallery', {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 3,
-    spaceBetween: 25,
-    autoplay: {
-        delay: 5000,
-    },
+    centeredSlides: true,
     navigation: {
         nextEl: '.product-gallery__next',
         prevEl: '.product-gallery__prev',
@@ -117,6 +114,15 @@ $('.popup__button-close').click(function() {
     $('.focus').removeClass('focus--active');
     $('body').css('overflow', 'visible');
 });
+
+$('.product-gallery__slide').click(function() {
+    let src = $(this).find('img').attr('src');
+    $('.product-images__preview').find('img').attr('src', src);
+    $('.product-gallery__slide').find('img').removeClass('product-gallery__slide--active');
+    $(this).find('img').addClass('product-gallery__slide--active');
+    
+});
+
 
 
 });

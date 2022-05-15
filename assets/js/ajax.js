@@ -31,10 +31,10 @@ $(document).ready(function () {
       let api = wpApiSettings.root;
       let button = $(this);
       let product;
-      if (!$('.favorites').length) {
-         product = button.closest('.product-card').data('id');
+      if ($('.product-item').length) {
+         product = $('.product-item').data('id');
       } else {
-         product = $('.favorites').closest('.favorites-item').data('id');
+         product = button.closest('.product-card').data('id');
       }
       $.ajax({
             url: api + 'favourites/v1/get_favourites/',
@@ -68,7 +68,6 @@ $(document).ready(function () {
       e.preventDefault();
       let api = wpApiSettings.root;
       let button = $(this);
-      console.log('work');
       $.ajax({
             url: api + 'cart/v1/add_to_cart/',
             data: { 

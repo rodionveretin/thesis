@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 
 get_header('shop'); ?>
 
-<div class="product-item">
+<div class="product-item" data-id="<?php the_ID(); ?>">
 	<div class="container">
 		<?php woocommerce_breadcrumb(); ?>
 		<?php the_post(); ?>

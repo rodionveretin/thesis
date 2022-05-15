@@ -103,11 +103,11 @@
       justify-content: space-between
 
    // promo
-   .swiper
+   .slider
       width: 100%
       height: 360px
-      &-slide
-         padding: 67px 75px
+   .slide
+      padding: 67px 75px
 
    .slide
       &__title
@@ -146,8 +146,19 @@
             margin-right: 140px
       &__bottom
          padding-bottom: 80px
+
    .dashboard
       padding: 30px 0px
+
+   .product-item__wrapper 
+      flex-direction: column
+
+   .product-images 
+      width: 100%
+
+   .product-item__info 
+      width: 100%
+
 
 
 @media (max-width: 576px)
@@ -155,9 +166,8 @@
       width: 100%
 
    // promo
-   .swiper
-      &-slide
-         padding: 37px 45px
+   .slide
+      padding: 37px 45px
 
    // footer
    .footer
@@ -185,10 +195,10 @@
          display: none
 
    // promo
-   .swiper
+   .slider
       height: 260px
-      &-slide
-         padding: 23px 20px
+   .slide
+      padding: 23px 20px
 
    .slide
       &__title

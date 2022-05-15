@@ -23,7 +23,7 @@
 			<div class="popup__header">
 				<div class="popup__title">Регистрация</div>
 				<div class="popup__button-close">
-					<a href="javascript:void(0);">&#10006;</a>
+					<a href="##">&#10006;</a>
 				</div>
 			</div>
 			<!-- /.popup__header -->
@@ -35,7 +35,7 @@
 			<div class="popup__header">
 				<div class="popup__title">Вход</div>
 				<div class="popup__button-close">
-					<a href="javascript:void(0);">&#10006;</a>
+					<a href="##">&#10006;</a>
 				</div>
 			</div>
 			<!-- /.popup__header -->
@@ -52,13 +52,6 @@
 						<div class="header-top__logo">
 							<?php if (has_custom_logo()) echo get_custom_logo(); ?>
 						</div>
-						<!--
-						<div class="header-top__search-form search mobile-inner">
-							<form action="#" class="search__form">
-								<input type="text" class="search__input" placeholder="Поиск" />
-							</form>
-						</div>
-						-->
 						<?php get_product_search_form(); ?>
 						<div class="header-top__cart">
 							<a href="<?php echo esc_url(wc_get_cart_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/icons/cart.svg" alt="Icon: Cart" /></a>
@@ -112,7 +105,7 @@
 							</div>
 							<!-- /.mobile-menu__button -->
 							<div class="mobile-menu__button">
-								<a href="javascript:void(0);" class="mobile-menu__link">
+								<a href="##" class="mobile-menu__link">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M1 13C1.55228 13 2 12.5523 2 12C2 11.4477 1.55228 11 1 11C0.447715 11 0 11.4477 0 12C0 12.5523 0.447715 13 1 13Z" fill="#BFCBD6" />
 										<path d="M22.7243 11H6.27571C5.57116 11 5 11.4209 5 11.94V12.06C5 12.5791 5.57116 13 6.27571 13H22.7243C23.4288 13 24 12.5791 24 12.06V11.94C24 11.4209 23.4288 11 22.7243 11Z" fill="#BFCBD6" />
@@ -136,7 +129,7 @@
 							</div>
 							<!-- /.mobile-menu__button -->
 							<div class="mobile-menu__button">
-								<a href="javascript:void(0);" class="mobile-menu__link">
+								<a href="##" class="mobile-menu__link">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#BFCBD6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 										<path d="M20.9999 21L16.6499 16.65" stroke="#BFCBD6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -146,7 +139,7 @@
 							</div>
 							<!-- /.mobile-menu__button -->
 							<div class="mobile-menu__button">
-								<a href="javascript:void(0);" class="mobile-menu__link">
+								<a href="##" class="mobile-menu__link">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<circle cx="2" cy="12" r="2" fill="#BFCBD6" />
 										<circle cx="12" cy="12" r="2" fill="#BFCBD6" />

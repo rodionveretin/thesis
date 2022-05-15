@@ -20,7 +20,7 @@
                <div class="slide__img">
                   <img src="<?php
                               $image = get_sub_field('slide_img');
-                              echo $image['url']; ?>" />
+                              echo $image['url']; ?>" alt="" />
                </div>
             </div>
          <?php endwhile; ?>
