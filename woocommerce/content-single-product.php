@@ -42,9 +42,9 @@ if (post_password_required()) {
 						<div class="swiper-wrapper">
 							<div class="swiper-slide product-gallery__slide">
 								<?php if ($product->get_image_id()) : ?>
-									<img src="<?php echo wp_get_attachment_url($product->get_image_id()); ?>" alt="<?php echo $product->get_name(); ?>" />
+									<img src="<?php echo wp_get_attachment_url($product->get_image_id()); ?>" alt="<?php echo $product->get_name(); ?>" class="product-gallery__slide--active" />
 								<?php else : ?>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.png" alt="<?php echo $product->get_name(); ?>" />
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/placeholder.png" alt="<?php echo $product->get_name(); ?>" class="product-gallery__slide--active" />
 								<?php endif; ?>
 							</div>
 							<?php
@@ -69,7 +69,7 @@ if (post_password_required()) {
 			the_title('<h1 class="product_title entry-title">', '</h1>');
 			?>
 			<div class="product-item__block">
-				<div class="rating">
+				<div class="rating product-item__rating">
 					<div class="rating__stars stars">
 						<?php $rating = floor($product->get_average_rating());
 						for ($i = 0; $i < $rating; $i++) :
@@ -94,7 +94,7 @@ if (post_password_required()) {
 						</a>
 					</div>
 				</div>
-				<div class="interactions__prices prices">
+				<div class="prices product-item__prices">
 					<?php if ($product->get_type() == 'simple') : ?>
 						<?php if ($product->get_sale_price()) : ?>
 							<del class="prices__old"><?php echo $product->get_regular_price(); ?> ₽</del>

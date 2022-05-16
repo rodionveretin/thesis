@@ -9,7 +9,7 @@ if (!defined('_S_VERSION')) {
 	define('_S_VERSION', '1.0.0');
 }
 /**
- * Настраойка темы по умолчанию и регистрирация поддержки различных функций WordPress.
+ * Настройка темы по умолчанию и регистрирация поддержки различных функций WordPress.
  */
 function thesis_setup()
 {
@@ -325,6 +325,11 @@ add_action('rest_api_init', function () {
 		'methods'  => 'POST',
 		'callback' => 'add_to_cart',
 	));
+
+	register_rest_route('wp/v2', 'users/register', array(
+		'methods' => 'POST',
+		'callback' => 'wc_rest_user_endpoint_handler',
+	));
 });
 
 /*
@@ -522,6 +527,52 @@ function add_to_cart(WP_REST_Request $request)
 	return WC()->cart->add_to_cart($product_id);
 }
 
+function wc_rest_user_endpoint_handler(WP_REST_Request $request)
+{
+	$response = array();
+	$parameters = $request->get_json_params();
+	$username = sanitize_text_field($parameters['username']);
+	$email = sanitize_text_field($parameters['email']);
+	$password = sanitize_text_field($parameters['password']);
+	// $role = sanitize_text_field($parameters['role']);
+	$error = new WP_Error();
+	if (empty($username)) {
+		$error->add(400, __("Username field 'username' is required.", 'wp-rest-user'), array('status' => 400));
+		return $error;
+	}
+	if (empty($email)) {
+		$error->add(401, __("Email field 'email' is required.", 'wp-rest-user'), array('status' => 400));
+		return $error;
+	}
+	if (empty($password)) {
+		$error->add(404, __("Password field 'password' is required.", 'wp-rest-user'), array('status' => 400));
+		return $error;
+	}
+	$user_id = username_exists($username);
+	if (!$user_id && email_exists($email) == false) {
+		$user_id = wp_create_user($username, $password, $email);
+		if (!is_wp_error($user_id)) {
+			$user = get_user_by('id', $user_id);
+			$user->set_role('subscriber');
+			// WooCommerce specific code
+			if (class_exists('WooCommerce')) {
+				$user->set_role('customer');
+			}
+			// Ger User Data (Non-Sensitive, Pass to front end.)
+			$response['code'] = 200;
+			$response['message'] = __("User '" . $username . "' Registration was Successful", "wp-rest-user");
+		} else {
+			return $user_id;
+		}
+	} else {
+		$error->add(406, __("Email already exists, please try 'Reset Password'", 'wp-rest-user'), array('status' => 400));
+		return $error;
+	}
+	return new WP_REST_Response($response, 123);
+}
+
+
+
 add_action('woocommerce_after_single_product_custom', 'woocommerce_output_product_data_tabs', 10);
 
 add_action('woocommerce_product_info_custom', 'woocommerce_template_single_title', 5);
@@ -532,3 +583,43 @@ add_action('woocommerce_product_info_custom', 'woocommerce_template_single_meta'
 add_action('woocommerce_product_info_custom', 'woocommerce_template_single_sharing', 50);
 
 add_action('woocommerce_product_info_price', 'woocommerce_template_single_add_to_cart', 10);
+
+function disable_emojis()
+{
+	remove_action('wp_head', 'print_emoji_detection_script', 7);
+	remove_action('admin_print_scripts', 'print_emoji_detection_script');
+	remove_action('wp_print_styles', 'print_emoji_styles');
+	remove_action('admin_print_styles', 'print_emoji_styles');
+	remove_filter('the_content_feed', 'wp_staticize_emoji');
+	remove_filter('comment_text_rss', 'wp_staticize_emoji');
+	remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+	add_filter('tiny_mce_plugins', 'disable_emojis_tinymce');
+	add_filter('wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2);
+}
+add_action('init', 'disable_emojis');
+
+function disable_emojis_tinymce($plugins)
+{
+	if (is_array($plugins)) {
+		return array_diff($plugins, array('wpemoji'));
+	}
+
+	return array();
+}
+
+function disable_emojis_remove_dns_prefetch($urls, $relation_type)
+{
+
+	if ('dns-prefetch' == $relation_type) {
+
+		// Strip out any URLs referencing the WordPress.org emoji location
+		$emoji_svg_url_bit = 'https://s.w.org/images/core/emoji/';
+		foreach ($urls as $key => $url) {
+			if (strpos($url, $emoji_svg_url_bit) !== false) {
+				unset($urls[$key]);
+			}
+		}
+	}
+
+	return $urls;
+}
