@@ -175,7 +175,7 @@ if (!defined('ABSPATH')) {
 					<div class="header-bottom__wrapper">
 						<div class="mobile-menu">
 							<div class="mobile-menu__button">
-								<a href="<?php echo get_home_url(); ?>" class="mobile-menu__link">
+								<a href="<?php echo get_home_url(); ?>" class="mobile-menu__link" aria-label="Главная страница">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M12.5901 1.41003L12.5897 1.40961C12.4339 1.25471 12.2231 1.16776 12.0034 1.16776C11.7836 1.16776 11.5729 1.25471 11.417 1.40961L11.4167 1.40995L1.41668 11.41L1.41633 11.4096L1.40803 11.4193C1.27178 11.5784 1.20058 11.7831 1.20867 11.9924C1.21675 12.2017 1.30352 12.4002 1.45164 12.5483C1.59975 12.6965 1.7983 12.7832 2.00761 12.7913C2.21692 12.7994 2.42158 12.7282 2.58068 12.592L2.581 12.5923L2.59002 12.5833L12 3.17334L21.41 12.5899L21.4096 12.5903L21.4194 12.5986C21.5785 12.7349 21.7831 12.8061 21.9924 12.798C22.2017 12.7899 22.4003 12.7031 22.5484 12.555C22.6965 12.4069 22.7833 12.2083 22.7914 11.999C22.7995 11.7897 22.7283 11.5851 22.592 11.426L22.5924 11.4257L22.5834 11.4167L12.5901 1.41003Z" fill="white" stroke="white" stroke-width="0.33" />
 										<path d="M18.5017 21.1683H16.3333C15.8722 21.1683 15.4983 20.7945 15.4983 20.3333V15.6666C15.4983 15.0232 14.9767 14.5016 14.3333 14.5016H9.66667C9.02325 14.5016 8.50167 15.0232 8.50167 15.6666V20.3333C8.50167 20.7945 8.12782 21.1683 7.66667 21.1683H5.49833V13.6094C5.49833 12.8685 4.60251 12.4974 4.07859 13.0214C3.92262 13.1773 3.835 13.3889 3.835 13.6094V21.3333C3.835 21.7307 3.99286 22.1118 4.27385 22.3928C4.55484 22.6738 4.93595 22.8316 5.33333 22.8316H9C9.64341 22.8316 10.165 22.31 10.165 21.6666V17C10.165 16.5388 10.5388 16.165 11 16.165H13C13.4612 16.165 13.835 16.5388 13.835 17V21.6666C13.835 22.31 14.3566 22.8316 15 22.8316H18.6667C19.064 22.8316 19.4452 22.6738 19.7261 22.3928C20.0071 22.1118 20.165 21.7307 20.165 21.3333V13.4494C20.165 13.2289 20.0774 13.0173 19.9214 12.8614C19.3975 12.3374 18.5017 12.7085 18.5017 13.4494V21.1683Z" fill="white" stroke="white" stroke-width="0.33" />
@@ -185,7 +185,7 @@ if (!defined('ABSPATH')) {
 							</div>
 							<!-- /.mobile-menu__button -->
 							<div class="mobile-menu__button">
-								<a href="##" class="mobile-menu__link">
+								<a href="##" class="mobile-menu__link" aria-label="Каталог">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M1 13C1.55228 13 2 12.5523 2 12C2 11.4477 1.55228 11 1 11C0.447715 11 0 11.4477 0 12C0 12.5523 0.447715 13 1 13Z" fill="#BFCBD6" />
 										<path d="M22.7243 11H6.27571C5.57116 11 5 11.4209 5 11.94V12.06C5 12.5791 5.57116 13 6.27571 13H22.7243C23.4288 13 24 12.5791 24 12.06V11.94C24 11.4209 23.4288 11 22.7243 11Z" fill="#BFCBD6" />
@@ -197,7 +197,7 @@ if (!defined('ABSPATH')) {
 							</div>
 							<!-- /.mobile-menu__button -->
 							<div class="mobile-menu__button">
-								<a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="mobile-menu__link">
+								<a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="mobile-menu__link" aria-label="Корзина">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M8.38164 21.7034C9.20955 21.7034 9.88071 21.0394 9.88071 20.2203C9.88071 19.4011 9.20955 18.7371 8.38164 18.7371C7.55372 18.7371 6.88257 19.4011 6.88257 20.2203C6.88257 21.0394 7.55372 21.7034 8.38164 21.7034Z" fill="#BFCBD6" />
 										<path d="M17.4893 21.7034C18.3173 21.7034 18.9884 21.0394 18.9884 20.2203C18.9884 19.4011 18.3173 18.7371 17.4893 18.7371C16.6614 18.7371 15.9903 19.4011 15.9903 20.2203C15.9903 21.0394 16.6614 21.7034 17.4893 21.7034Z" fill="#BFCBD6" />
@@ -209,7 +209,7 @@ if (!defined('ABSPATH')) {
 							</div>
 							<!-- /.mobile-menu__button -->
 							<div class="mobile-menu__button">
-								<a href="##" class="mobile-menu__link">
+								<a href="##" class="mobile-menu__link" aria-label="Поиск">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#BFCBD6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
 										<path d="M20.9999 21L16.6499 16.65" stroke="#BFCBD6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -219,7 +219,7 @@ if (!defined('ABSPATH')) {
 							</div>
 							<!-- /.mobile-menu__button -->
 							<div class="mobile-menu__button">
-								<a href="##" class="mobile-menu__link">
+								<a href="##" class="mobile-menu__link" aria-label="Ещё">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<circle cx="2" cy="12" r="2" fill="#BFCBD6" />
 										<circle cx="12" cy="12" r="2" fill="#BFCBD6" />

@@ -28,14 +28,15 @@
       margin-bottom: 20px
    
    &__favorites
-      display: inline
-      margin-top: 20px
-      margin-bottom: 20px
+      margin-left: 5px
       a
          border: 1px solid #C8CACB
          border-radius: 4px
          padding: 14px
          padding-top: 16px
+
+.product-item__wrapper-buttons
+   display: flex
 
 
 .product-images
@@ -43,10 +44,16 @@
    &__preview
       position: relative
       overflow: hidden
+      width: 585px
+      height: 585px
       img
-         width: 110%
-         height: 110%
+         width: 100%
+         height: 100%
+         object-fit: contain
          transition: all 0.1s ease
+
+.woocommerce-Price-amount
+   margin-bottom: 20px
 
 .product-gallery
    width: 204px
@@ -88,3 +95,17 @@
    color: #070C11 !important
 .price 
    color: #070C11 !important
+
+label
+   a
+      text-decoration: none
+      color: #243C53
+      font-weight: 700
+
+
+.woocommerce
+   .product
+      .cart
+         .quantity
+            input
+               height: 48px

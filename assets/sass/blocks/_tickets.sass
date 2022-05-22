@@ -1,0 +1,99 @@
+.tickets
+   margin-top: 20px
+   &__item
+      display: flex
+      width: 100%
+      padding: 10px 10px 10px 20px
+      border: 1px solid #838688
+      border-radius: 8px
+      &:not(:last-child)
+         margin-bottom: 8px
+   &__title
+         flex-grow: 1
+         font-weight: 700
+         color: #243C53
+         a
+            color: #243C53
+            &:hover
+               color: #ff0000
+   &__date
+      margin-left: 5px
+   &__close-button
+      border: none
+      background: unset
+      cursor: pointer
+      margin-right: 15px
+
+.ticket-add
+   cursor: pointer
+
+.tickets-modal
+   display: none
+   position: absolute
+   background: #EDF2F6
+   border: 1px solid #EAEAF0
+   border-radius: 8px
+   padding: 20px
+   top: 50%
+   left: 50%
+   transform: translate(-50%, -50%)
+   width: 500px
+   z-index: 1001
+   &__close
+      position: absolute
+      right: 5px
+      top: 5px
+      cursor: pointer
+   form
+      display: flex
+      flex-direction: column
+   &__title
+      outline: none
+      margin-bottom: 20px
+      padding: 10px 10px 10px 20px
+      border: 1px solid #838688
+      border-radius: 5px
+   &__message
+      outline: none
+      margin-bottom: 20px
+      resize: none
+      padding: 10px 10px 10px 20px
+      border: 1px solid #838688
+      border-radius: 5px
+      height: 200px
+   &__submit
+      cursor: pointer
+
+.single-ticket
+   padding: 40px 0px
+   &__title
+      margin-bottom: 20px
+   &__message
+      margin-bottom: 20px
+   &__item
+      display: flex
+      flex-direction: column
+      padding: 10px 10px 10px 20px
+      border: 1px solid #838688
+      border-radius: 8px
+      &:not(:last-child)
+         margin-bottom: 20px
+   &__form
+      form
+         display: flex
+         flex-direction: column
+   &__input
+      width: 100%
+      margin-top: 20px
+      outline: none
+      resize: none
+      padding: 10px 10px 10px 20px
+      border: 1px solid #838688
+      border-radius: 5px
+      height: 200px
+   &__submit
+      margin-top: 20px
+      cursor: pointer
+      
+
+         

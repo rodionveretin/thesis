@@ -13,6 +13,8 @@
       width: 49%
       background: #EDF2F6
       border-radius: 8px
+   &__content
+      width: 100%
    &__img
       width: 150px
       height: 180px
@@ -28,6 +30,11 @@
       margin-bottom: 20px
    &__text
       margin-bottom: 30px
+      overflow: hidden
+      p
+         display: -webkit-box
+         -webkit-line-clamp: 3
+         -webkit-box-orient: vertical
    &__link
       align-self: end
       a
@@ -43,7 +50,38 @@
       display: flex
       align-items: center
       justify-content: space-between
+      width: 100%
    &__date
       font-size: 16px
       line-height: 120%
       color: #838688
+
+.single-post
+   padding-bottom: 40px
+   &__title
+      font-weight: 700
+      font-size: 36px
+      color: #070C11
+      margin-bottom: 30px
+   &__wrapper
+      display: flex
+      width: 100%
+   &__content
+      width: 60%
+      font-weight: 400
+      font-size: 16px
+      line-height: 130%
+      color: #070C11
+      padding-right: 10px
+   &__image
+      width: 40%
+      //flex-shrink: 0
+      align-self: start
+      img
+         width: 100%
+         object-fit: contain
+   
+.show-more
+   display: flex
+   justify-content: center
+   margin-bottom: 40px

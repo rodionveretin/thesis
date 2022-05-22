@@ -1,6 +1,6 @@
 <?php
 /*
-   Template Name: Хиты продаж
+   Template Name: Новинки
 */
 
 ?>
@@ -15,10 +15,9 @@
       echo esc_html(woocommerce_breadcrumb());
       $args = array(
          'limit'     => 30,
-         'orderby'   => array('meta_value_num' => 'DESC', 'title' => 'ASC'),
+         'orderby'   => array('date' => 'DESC', 'title' => 'ASC'),
          'meta_type' => 'NUMERIC',
          'meta_key'  => 'total_sales',
-         'page' => 1,
       );
       $query = new WC_Product_Query($args);
       $products = $query->get_products();
@@ -26,7 +25,7 @@
          <section class="product-block">
             <div class="container">
                <div class="product-block__header">
-                  <h2 class="product-block__title">Хиты продаж</h2>
+                  <h2 class="product-block__title">Новинки</h2>
                </div>
                <!-- /.product-block__header -->
                <div class="product-block__wrapper">

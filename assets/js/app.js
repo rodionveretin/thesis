@@ -124,5 +124,12 @@ $('.product-gallery__slide').click(function() {
 });
 
 
+$('.ticket-add').click(function() {
+    $('.tickets-modal').show(300);
+});
+
+$('.tickets-modal__close').click(function() {
+    $('.tickets-modal').hide(300);
+});
 
 });
